@@ -3,10 +3,10 @@ public class Carta {
     private boolean cartaRevelada;
     private boolean parejaEncontarda;
 
-    public Carta (String simbolo, boolean cartaRevelada, boolean parejaEncontarda) {
+    public Carta (String simbolo) {
         this.simbolo = simbolo; 
-        this.cartaRevelada = cartaRevelada;
-         this.parejaEncontarda = parejaEncontarda;
+        this.cartaRevelada = false;
+         this.parejaEncontarda = false;
     }
 
     public String getSimbolo () {

@@ -8,8 +8,12 @@ public class Main {
     // Atributos para el jugador
     String nombreJ1;
     String nombreJ2;
+    // Atributos para el jugador
+    String simboloNuevo;
     // Atributos para crear el tablero
     int tamano;
+    // Controlador
+    Controlador control = new Controlador();
 
         do {
             do{
@@ -27,14 +31,16 @@ public class Main {
                     nombreJ1 = datos.nextLine();
                     System.out.println("Ingrese el nombre del jugador 2: ");
                     nombreJ2 = datos.nextLine();
-                    System.out.println("Ingrese el tamaño del tablero: ");
+                    System.out.println("Ingrese el tamaño del tablero (osea la cantidad de parejas): ");
                     tamano = datos.nextInt();
+                    control.jugar(nombreJ1, nombreJ2, tamano);
                     break;
             
                 case 2:
                     datos = new Scanner(System.in);
                     System.out.println("Ingrese el nuevo simbolo: ");
-                    nombreJ1 = datos.nextLine();
+                    simboloNuevo = datos.nextLine();
+                    control.AgregarSimbolo(simboloNuevo);
                     break;
 
                 case 3:
